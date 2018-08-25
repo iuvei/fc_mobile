@@ -1,0 +1,111 @@
+// 红色按钮
+@footer: 1rem;
+@font: 16px;
+.my-button(@width;
+@height;
+@bgcolor: #d62541) {
+    width: @width;
+    height: @height;
+    display: block;
+    border: 0;
+    border-radius: 4px;
+    background-color: @bgcolor;
+    color: #fff;
+    &:active {
+        opacity: 0.7;
+    }
+}
+
+// 头部
+.yd-navbar {
+    background-color: #011935 !important;
+    .yd-navbar-center-title {
+        color: #fff !important;
+    }
+    .yd-back-icon:before {
+        color: #fff;
+    }
+}
+
+//   布局
+.my-display(@hor;
+@ver) {
+    display: flex;
+    justify-content: @hor;
+    align-items: @ver;
+}
+
+.init {
+    height: 100%;
+    padding-top: 1rem;
+    padding-bottom: @footer;
+    font-size: @font;
+}
+
+//主体部分
+.my-container() {
+    padding: 0.2rem 0.3rem 0; // height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+//叉
+.my-cross(@width;
+@height;
+@deg) {
+    content: "";
+    display: block;
+    width: @width;
+    height: @height;
+    background: #49a4f5;
+    transform: rotate(@deg);
+}
+
+//展示查询结果部分
+.my-article() {
+    flex: 1;
+    overflow: auto;
+    margin: 0.1rem 0 0;
+}
+
+//底板分页器
+.my-footer() {
+    width: 100%;
+    height: @footer;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+//加号
+.add {
+    &:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        margin-bottom: -50%;
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 20px;
+        background-color: #fff;
+        margin: auto;
+    }
+}
+
+//三角形
+.my-triangle(@color) {
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid @color;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
